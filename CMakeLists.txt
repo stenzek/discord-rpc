@@ -9,11 +9,8 @@ file(GLOB_RECURSE ALL_SOURCE_FILES
     src/*.cpp src/*.h src/*.c
 )
 
-# thirdparty stuff
-execute_process(
-    COMMAND mkdir ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty
-    ERROR_QUIET
-)
+set(CMAKE_C_VISIBILITY_PRESET hidden)
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 set(RAPIDJSON "${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/rapidjson")
 
